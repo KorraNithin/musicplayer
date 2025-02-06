@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
 }
+
 header{
     background-color: black;
     height: 60px;
@@ -51,6 +52,37 @@ header{
     background-color: rgba(128, 128, 128, 0.338);
 
 }
+.box2:hover{
+    background-color: rgba(128, 128, 128, 0.415);
+    
+ }
+ .homeicon:hover{
+    transform: scale(1.1);
+
+ }
+ #p5:hover{
+    
+    color: white;
+ }
+ #p6:hover{
+    
+    transform: scale(1.1);
+ }
+ #p4:hover{
+    color: white;
+ }
+#p1:hover{
+    
+   color: white;
+}
+#p2:hover{
+    
+    color: white;
+ }
+ #p3:hover{
+    
+    color: white;
+ }
 
 .logo{
     height: 9px;
@@ -67,6 +99,8 @@ header{
 }
 
 #searchbar{
+   
+
     margin-right: 5px;
     color: rgba(255, 255, 255, 0.529);
     padding-top: 4px;
@@ -76,9 +110,9 @@ margin:  5px 5px 5px 10px;
   width: 300px;
 }
 
+
 input::placeholder {
     
-   
     
     font-size: 16px;
         color: rgba(255, 255, 255, 0.529);
@@ -92,6 +126,8 @@ input::placeholder {
 
   .navs {
     display: flex;
+    width: 80px;
+
   }
   
   #p1{
@@ -124,15 +160,61 @@ input::placeholder {
     letter-spacing: 1.5px;
     margin-left: 13px;
   }
-  
 
-  .box3{
+  #p4{
+    color: rgba(255, 255, 255, 0.529);
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 2px;
+    margin-right: 10px;
+    width: 70px;
+    padding-top: 14px;
+    text-decoration: none;
+    margin-left: 50px;
+    /* background-color: yellow; */
+  }
+
+  #p5{
+    color: rgba(255, 255, 255, 0.529);
+
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 2px;
+    width: 60px;
+/* background-color: blue; */
+    padding-top: 14px;
+    text-decoration: none;
     
-    width: 800px;
+    
+  }
+
+  #p6{
+    width: 80px;
+background-color: white;
+    color: black;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 2px;
+    padding-bottom: 14px;
+    padding-top: 14px;
+    text-decoration: none;
+padding-left: 35px;  
+border-radius: 55px;
+margin-left: 15px;
   }
   
+
+  
+  
   #arrow{
-    
     margin: 15px;
     width: 1.1vw;
   }
+
+  h4{
+    display: flex;
+  }
+.container2{
+    display: flex;
+}
+
