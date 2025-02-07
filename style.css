@@ -61,26 +61,31 @@ header{
 
  }
  #p5:hover{
-    
+    transform: scale(1.01);
+
     color: white;
  }
  #p6:hover{
     
-    transform: scale(1.1);
+    transform: scale(1.03);
  }
  #p4:hover{
+    transform: scale(1.01);
+
     color: white;
  }
 #p1:hover{
-    
+    transform: scale(1.01);
    color: white;
 }
 #p2:hover{
-    
+    transform: scale(1.01);
+
     color: white;
  }
  #p3:hover{
-    
+    transform: scale(1.01);
+
     color: white;
  }
 
@@ -218,3 +223,143 @@ margin-left: 15px;
     display: flex;
 }
 
+.left{
+    border-radius: 8px;
+    height: 660px;
+    margin: 5px ;
+    width: 30%;
+    background-color: black
+}
+.heading{
+   
+    display: flex;
+    
+    align-items: center;
+    padding-top: 14px;
+}
+.heading img{
+    padding-left: 14px;
+    width: 28px;
+}
+h4{
+    padding-left: 10px;
+    width: 100px;
+   
+}
+#plus{
+    display: flex;
+    align-items: center;
+    width: 18px;
+
+    padding-left: 250px;
+}
+
+.leftside{
+  
+    margin: 5px ;
+    height: 100px;
+    border-radius: 9px;
+    background-color: rgba(128, 128, 128, 0.325)
+}
+.left1{width: 90%;
+    padding-top: 8px;
+    display: flex;
+    color: white;
+    font-size: medium;
+    font-weight: 600;
+    margin-left: 16px;
+    margin-top: 30px;
+    /* background-color: red; */
+}
+h5{
+   font-weight: 550;
+    display: flex;
+    color: rgba(255, 255, 255, 0.859);
+    padding-bottom: 15px;
+    margin-left: 18px;
+    margin-top: 7px;
+
+}
+#btnplaylist{
+    
+    font-size: small;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+  background-color: white;
+  margin: 50px 0px 0px 25px;
+  padding: 6px;
+  border-radius: 80px;
+  }
+  #btnpodcasts{
+    font-size: smaller;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+  background-color: white;
+  margin: 50px 0px 0px 25px;
+  padding: 7px;
+  border-radius: 80px;
+
+  }
+
+ 
+
+  .footer{
+    background-color: black;
+    display: flex;
+    width: 95%;
+    height: 40px;
+    
+    margin-top: 250px;
+    display: flex;
+    gap: 15px;
+    
+    
+
+
+  }
+
+  .footer a{
+   padding-left: 5px;
+    color: gray;
+    
+    font-size: 12px;
+    display: flex;
+    text-decoration: none;
+  }
+
+  .footer a:hover{
+    text-decoration: underline;
+  }
+
+  #langicon{
+   
+    
+    width: 17px;
+    
+  }
+
+  .langbox{
+    
+    border: 1px solid white;
+    margin: 10px;
+    align-items: center;
+    border-radius: 2000px;
+    justify-content: center;
+    display: flex;
+   height: 35px;
+        width: 110px;
+    background-color: black;
+        color: white;
+        
+      }
+      .langbox a{
+        text-decoration: none;
+        color: white;
+      }
+      .langbox:hover{
+        transform: scale(1.1);
+        color: white;
+      }
+      
