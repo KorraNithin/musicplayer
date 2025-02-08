@@ -1,15 +1,10 @@
-/* .left {
-    width: 25vw;
-
-}
-
-.right{
-    width: 75vw;
-} */
- 
 *{
     margin: 0;
     padding: 0;
+}
+
+.flex{
+    display: flex;
 }
 
 header{
@@ -223,13 +218,21 @@ margin-left: 15px;
     display: flex;
 }
 
+body{
+    background-color: black;
+    color: white;
+}
+
 .left{
+    
     border-radius: 8px;
     height: 660px;
-    margin: 5px ;
-    width: 30%;
-    background-color: black
+    margin-left: 5px;
+    width: 31vw;
+    background-color: rgba(128, 128, 128, 0.155)
 }
+
+
 .heading{
    
     display: flex;
@@ -252,6 +255,10 @@ h4{
     width: 18px;
 
     padding-left: 250px;
+}
+
+.main{
+    background-color: black;
 }
 
 .leftside{
@@ -306,7 +313,7 @@ h5{
  
 
   .footer{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.89)
     display: flex;
     width: 95%;
     height: 40px;
@@ -350,8 +357,8 @@ h5{
     display: flex;
    height: 35px;
         width: 110px;
-    background-color: black;
-        color: white;
+        background-color: rgba(0, 0, 0, 0.89)
+        
         
       }
       .langbox a{
@@ -362,4 +369,68 @@ h5{
         transform: scale(1.1);
         color: white;
       }
-      
+
+      .right{
+        margin-left: 10px;
+        width: 69vw;
+        border-radius: 8px;
+       /* border: 3px solid red; */
+       background-color: rgba(128, 128, 128, 0.237);
+        
+      }
+h1{
+    font-weight: 700;
+     padding: 17px;
+}
+.spotifyplaylists{
+  justify-content: space-between;
+  display: flex;
+}
+
+h2{
+  font-weight: 500;
+   padding: 17px;
+}
+.cardcontainer{
+  justify-content: space-evenly;
+  display: flex;
+}
+.card{
+  position: relative;
+  border-radius: 8px;
+padding: 10px;
+  width: 250px;
+  background-color: rgba(128, 128, 128, 0.186);
+}
+.card h2{
+  font-weight: 800;
+  padding: 1px;
+}
+.card p{
+  font-size: 14px;
+  font-style: italic;
+}
+   
+.card img{
+  border-radius: 8px;
+ object-fit: contain;
+  width: 100%;
+  
+}
+.play svg{
+  padding: 8px;
+  
+
+}
+.play{
+  padding: 8px;
+  padding-bottom: 4px;
+  border-radius: 40px;
+  background-color: #3be276;
+  position: absolute;
+  left: 194px;
+  top: 198px;
+  opacity: 1;
+  transition: all 1s ease-out;
+  
+}
