@@ -219,12 +219,13 @@ margin-left: 15px;
 }
 
 body{
+  overflow-x: hidden;
     background-color: black;
     color: white;
 }
 
 .left{
-    
+  
     border-radius: 8px;
     height: 660px;
     margin-left: 5px;
@@ -386,16 +387,23 @@ h1{
   justify-content: space-between;
   display: flex;
 }
+.spotifyplaylists h2:hover{
+  text-decoration: underline;
 
-h2{
+}
+.spotifyplaylists h2{
   font-weight: 500;
    padding: 17px;
 }
 .cardcontainer{
+  max-height: 70vh;
+  overflow-y: scroll;
   justify-content: space-evenly;
   display: flex;
+  flex-wrap: wrap;
 }
 .card{
+  margin: 10px;
   position: relative;
   border-radius: 8px;
 padding: 10px;
@@ -433,4 +441,31 @@ padding: 10px;
   opacity: 1;
   transition: all 1s ease-out;
   
+}
+
+.playbar{
+ margin-top: 8px;
+ margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  
+  width: 67%;
+  border-radius: 25px;
+  background-color: rgba(178, 203, 194, 0.286);
+  position: absolute;
+  
+}
+.playbar img{
+  width: 35px;
+ 
+  padding: 18px;
+}
+
+.songList ul{
+  margin: 14px;
+  padding: 0px 43px;
+
+}
+.songList ul li{
+  list-style-type: decimal;
 }

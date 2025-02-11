@@ -11,3 +11,30 @@
 .items-center{
     align-items: center;
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Dark background for the track */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333; /* Darker thumb */
+    border-radius: 5px;
+    border: 2px solid #1a1a1a; /* Adds some spacing */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Lighter color on hover */
+}
+
+/* Firefox scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #333 #1a1a1a;
+}
+ 
