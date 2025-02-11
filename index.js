@@ -42,7 +42,7 @@ for (const song of songs) {
     
 }
 //to play the song
-var audio = new Audio(songs);
+var audio = new Audio(songs[0]);
 audio.play();
 }
 main()
