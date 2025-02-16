@@ -1,3 +1,21 @@
+let currentSong = new Audio();
+function secondsToMinutesSeconds(seconds) {
+    if (isNaN(seconds) || seconds < 0) {
+        return "Invalid input";
+    }
+
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+
+    const formattedMinutes = String(minutes).padStart(2, '0');
+    const formattedSeconds = String(remainingSeconds).padStart(2, '0');
+
+    return `${formattedMinutes}:${formattedSeconds}`;
+}
+
+
+
+
 async function getSongs() {
     
     let a = await fetch("http://127.0.0.1:5500/songs/")
@@ -9,40 +27,83 @@ async function getSongs() {
    for (let index = 0; index < as.length; index++) {
     const element = as[index];  
     if(element.href.endsWith(".mp3")){
-        songs.push(element.href.split("/songs/")[1].replaceAll("YouConvert.net" , " "))
+        songs.push(element.href.split("/songs/")[1])
     }
-    // console.log(songs)
+    
 }
 return songs
+}
+
+const playMusic = (track)=>{
+    currentSong.src = "/songs/" +  track
+    currentSong.play()
+    play.src = "svgs/pause.svg"
+
+    document.querySelector(".songinfo").innerHTML = track
+     document.querySelector(".songtime").innerHTML = "00:00 / 00:00"
+
+    
 
 }
+
+
 async function main () {
-    //to list all songs
+
+  
+
+
+//     //to list all songs
     let songs = await getSongs()
-console.log(songs)
+    console.log(songs)
 
 let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0]
 for (const song of songs) {
     songUL.innerHTML = songUL.innerHTML + `<li> 
-                            <img class="invert" src="music.svg" alt="">
-                           <div class="info">
-                            <div>${song.replaceAll("%5" , " ").replaceAll("B_ _ D", " ").replaceAll("OFFICIAL_MUSIC_VIDEO", " ").replaceAll("YouTube_", "nithin").replaceAll("The_Weeknd%2C_Ariana_Grande_-_Die_For_You_(Remix_Lyric_Video)_", "Die_for_You").replaceAll("Taylor_Swift_-_Blank_Space_", "Blank_space").replaceAll("SEVDALIZA_-_ALIBI_FT._PABLLO_VITTAR_YSEULT_( )_", "_ALIBI_FT").replaceAll("Lana_Del_Rey_-_Summertime_Sadness_(Official_Music_Video)_", "Summertime_Sadness").replaceAll("httpswww.youtube.comwatchvmKot2PXjxss_ ", "nithin").replaceAll("Dua_Lipa_-_Levitating_(Lyrics)_", "_Levitating_").replaceAll("Anuv_Jain_-_HUSN_(Lyrics)_", "_HUSN_")}</div>
-                            <div>Anuv Jain</div>
-                           </div>
-                         <div class="playnow">
-                            Play Now
-                            <img class="invert" src="play.svg" alt="">
-                         </div>
-                           
-                        
+
+     <img class="invert" src="svgs/music.svg" alt="">
+                            <div class="info">
+                             <div>${song}</div>
+                             <div>Anuv Jain</div>
+                          </div>
+                          <div class="playnow">
+                             Play Now
+                             <img class="invert" src="svgs/play.svg" alt="">
+                          </div>
     
     
+    </li>`
+} 
     
-     </li>`;
     
-}
-//to play the song
-var audio = new Audio(songs[0]);
-audio.play();
+ 
+
+//to select every song from the list
+Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e=>{
+    e.addEventListener("click", element=>{
+        console.log(e.querySelector(".info").firstElementChild.innerHTML)
+        playMusic(e.querySelector(".info").firstElementChild.innerHTML)
+  })
+
+})
+
+//to add evntlistnr to playbuttons
+play.addEventListener("click", ()=>{
+    if(currentSong.paused){
+        currentSong.play()
+        play.src = "svgs/pause.svg"
+    }
+    else{
+        currentSong.pause()
+        play.src = "svgs/play.svg"
+    }
+})
+
+// song time updating
+currentSong.addEventListener("timeupdate", ()=>{
+    console.log(currentSong.currentTime, currentSong.currentduration);
+    document.querySelector(".songtime").innerHTML = `${secondsToMinutesSeconds(currentSong.currentTime)}/${secondsToMinutesSeconds(currentSong.currentduration)}`
+})
+
 }
 main()
+

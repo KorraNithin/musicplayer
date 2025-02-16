@@ -315,9 +315,9 @@ h5{
 
  
 
-  .footer{
+  .footer {
     
-    background-color: rgba(0, 0, 0, 0.89)
+    background-color: rgba(0, 0, 0, 0.89);
     display: flex;
     width: 95%;
     height: 40px;
@@ -326,10 +326,7 @@ h5{
     display: flex;
     gap: 15px;
     
-    
-
-
-  }
+    }
 
   .footer a{
    padding-left: 5px;
@@ -449,7 +446,8 @@ padding: 10px;
 }
 
 .playbar{
- 
+ height: 80px;
+ overflow-y: hidden;
  margin-top: 8px;
  margin-left: 10px;
   display: flex;
@@ -457,7 +455,7 @@ padding: 10px;
   
   width: 67%;
   border-radius: 25px;
-  background-color: greenyellow;
+  background-color: rgb(134, 136, 132);
   position: absolute;
   
 }
@@ -467,6 +465,7 @@ padding: 10px;
   padding: 18px;
 }
 .songList{
+  list-style-type: none;
   margin-top: 5px;
  height: 444px;
   overflow: auto;
@@ -484,7 +483,7 @@ padding: 10px;
   display: flex;
   gap: 10px;
   padding: 12px;
-  list-style-type: none;
+  
   border: 1px solid rgb(85, 82, 82);
   margin: 4px;
   border-radius: 6px;
@@ -499,6 +498,7 @@ padding: 10px;
 }
 
 .seekbar{
+  padding-right: 2px;
   height: 4px;
   border: 1px solid white;
   margin-top: 18px;
@@ -518,15 +518,40 @@ padding: 10px;
   position: absolute;
   height: 3px;
   border: 1px solid white;
-  margin-top: 0px;
- margin-left: 0px;
+  
   display: flex;
   justify-content: center;
   border: 1px solid black;
-  width: 5px;
+  width: 67%;
   border-radius: 25px;
   position: absolute;
   background-color: white;
   left: 0;
+  transition: left 0.5s;
+
+}
+.info{
+  font-size: small;
+width: 100%;
+}
+
+.playbuttons{
+  cursor: pointer;
+}
+
+.songinfo, .songtime{
+  position: absolute;
+}
+
+.songinfo{
+  padding: 20px;
+  left: 40px;
+  bottom: 40px;
+}
+
+.songtime{
+  padding: 20px;
+  right: 30px;
+  bottom: 0px;
 
 }
