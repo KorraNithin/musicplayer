@@ -1,3 +1,7 @@
+:root{
+  --a:0;
+}
+
 * {
   
   margin: 0;
@@ -354,7 +358,7 @@ h5{
     
     margin-left: 30px;
     align-items: center;
-    border-radius: 2000px;
+    border-radius: 20px;
     justify-content: center;
     display: flex;
    height: 35px;
@@ -405,6 +409,7 @@ h1{
   flex-wrap: wrap;
 }
 .card{
+  cursor: pointer;
   margin: 10px;
   position: relative;
   border-radius: 8px;
@@ -412,6 +417,12 @@ padding: 10px;
   width: 250px;
   background-color: rgba(128, 128, 128, 0.186);
 }
+.card:hover{
+  --a:1;
+  transition: 0.5s ease-in-out;
+  background-color: rgba(128, 128, 128, 0.493);
+}
+
 .card h2{
   font-weight: 800;
   padding: 1px;
@@ -433,6 +444,7 @@ padding: 10px;
 
 }
 .play{
+  cursor: pointer;
   padding: 8px;
   padding-bottom: 4px;
   border-radius: 40px;
@@ -440,9 +452,13 @@ padding: 10px;
   position: absolute;
   left: 194px;
   top: 198px;
-  opacity: 1;
-  transition: all 1s ease-out;
+  opacity: var(--a);
+  transition: all 0.3s ease-out;
   
+}
+
+.play:hover{
+  opacity: 1;
 }
 
 .playbar{
@@ -455,11 +471,12 @@ padding: 10px;
   
   width: 67%;
   border-radius: 25px;
-  background-color: rgb(134, 136, 132);
+  background-color: rgba(134, 136, 132, 0.312);
   position: absolute;
   
 }
 .playbar img{
+  
   width: 35px;
   margin-top: 15px;
   padding: 18px;
@@ -498,6 +515,7 @@ padding: 10px;
 }
 
 .seekbar{
+  cursor: pointer;
   padding-right: 2px;
   height: 4px;
   border: 1px solid white;
@@ -514,7 +532,7 @@ padding: 10px;
 }
 
 .circle{
-
+  cursor: pointer;
   position: absolute;
   height: 3px;
   border: 1px solid white;
@@ -522,7 +540,7 @@ padding: 10px;
   display: flex;
   justify-content: center;
   border: 1px solid black;
-  width: 67%;
+  width: 0%;
   border-radius: 25px;
   position: absolute;
   background-color: white;
@@ -540,13 +558,16 @@ width: 100%;
 }
 
 .songinfo, .songtime{
+  font-style: italic;
+  color: whitesmoke;
   position: absolute;
 }
 
 .songinfo{
-  padding: 20px;
-  left: 40px;
-  bottom: 40px;
+ 
+  padding: 0px 0px 20px 0px;
+  left: 35px;
+  bottom: 0px;
 }
 
 .songtime{
@@ -555,3 +576,28 @@ width: 100%;
   bottom: 0px;
 
 }
+
+
+
+/* 
+
+@media (max-width: 800px) {
+
+  .left{
+    background-color: red;
+    
+  }
+  .navs{
+    width: 0px;
+  
+  }
+  #p1, #p2, #p3{
+    padding-left: 3px;
+    margin: 0px;
+  }
+  
+  .container2{
+    margin-left: ;
+  }
+} */
+
