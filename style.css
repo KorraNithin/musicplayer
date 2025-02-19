@@ -65,7 +65,7 @@ header{
 
     color: white;
  }
- #p6:hover{
+ .login:hover{
     
     transform: scale(1.03);
  }
@@ -193,9 +193,16 @@ input::placeholder {
     
   }
 
-  #p6{
+  button{
+    
+    border: 0;
+    background-color:transparent;
+  }
+
+  .login{
+    text-align: justify;
     width: 80px;
-background-color: white;
+background-color: red;
     color: black;
     font-weight: 600;
     font-size: 14px;
